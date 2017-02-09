@@ -38,19 +38,19 @@ public class ProcessFactory {
 	}
 
 	public Process generate() {
-		return new Process(getId(), getArrivalTime(), getPriority(), maxBurst, minBurst);
+		return new Process(getId(), assignArrivalTime(), assignPriority(), maxBurst, minBurst);
 	}
 
 	private int getId() {
 		return id++;
 	}
 
-	private double getArrivalTime() {
+	private double assignArrivalTime() {
 		arrivalTime += new Random().nextGaussian() * stdDeviance + mean;
 		return arrivalTime;
 	}
 
-	private int getPriority() {
+	private int assignPriority() {
 		return new Random().nextInt(MAX_PRIORITY - MIN_PRIORITY + 1) + MIN_PRIORITY;
 	}
 

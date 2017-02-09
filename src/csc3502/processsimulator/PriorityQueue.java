@@ -1,9 +1,17 @@
 package csc3502.processsimulator;
 
+/*
+ * Homework 3:
+ * @Author you name here..
+ * Goal: finish the code in each functions to provide priority queue.
+ * Note that in this class, PriorityQueue class in java library is not allowed to be used here.
+ * You could implement and maintain a sorted linked list using the class Node below.
+ * You are not allowed to change other classes except this one.
+ */
+
 public class PriorityQueue implements Queue {
 
 	Node head = new Node(null);
-	Node pointer = head;
 
 	class Node {
 		Process process;
@@ -17,29 +25,26 @@ public class PriorityQueue implements Queue {
 
 	@Override
 	public void offer(Process p) {
-		// TODO Auto-generated method stub
-		pointer.next = new Node(p);
-		pointer = pointer.next;
-
+		// implement this method
 	}
 
 	@Override
 	public Process poll() {
-		// TODO Auto-generated method stub
-		Node q = head.next;
-		head = head.next;
-		return q.process;
+		// implement this method
+
+		return null;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return head.next == null;
+		// implement this method
+
+		return true;
 	}
 
 	@Override
 	public String getSignature() {
-		// TODO Auto-generated method stub
+		// change this string to your name
 		return "Gavin Liu";
 	}
 }

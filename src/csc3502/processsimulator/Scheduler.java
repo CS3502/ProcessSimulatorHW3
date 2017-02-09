@@ -5,7 +5,7 @@ import java.util.List;
 public class Scheduler {
 
 	static double idleTime = 0;
-	static Queue queue = new FIFOQueue();
+	static Queue queue = new PriorityQueue();
 
 	public static void executeProcesses() {
 		double currentTime = 0;
@@ -16,13 +16,15 @@ public class Scheduler {
 				idleTime = process.getArrivalTime() - currentTime;
 				currentTime = process.getArrivalTime();
 			}
-			System.out.printf("process %d started at time %f.\n", process.getId(), currentTime);
+			System.out.printf("process %d with priority %d started at time %f.\n", process.getId(),
+					process.getPriority(), currentTime);
 			do {
 				double currentBurstTime = process.getNextBurstTime();
 				System.out.printf("process %d has CPU burst %f.\n", process.getId(), currentBurstTime);
 				currentTime += currentBurstTime;
 			} while (process.hasMoreBurst());
-			System.out.printf("process %d completes and terminates at %f.\n", process.getId(), currentTime);
+			System.out.printf("process %d with priority %d completes and terminates at %f.\n", process.getId(),
+					process.getPriority(), currentTime);
 		}
 
 		System.out.println("Simulation summary");
