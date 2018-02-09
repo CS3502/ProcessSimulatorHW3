@@ -13,7 +13,7 @@ In Scheduler.java, there is a main class, which is the entrance of this repo.
 After finishing PriorityQueue.java, you should be able to run this as java application.
 The program will print out the processes execution trace.
 
-#What to submit
+# What to submit
 
 The runnable jar of this java program.
 
