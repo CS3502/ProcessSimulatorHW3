@@ -27,4 +27,4 @@ And check the prints.
 (1) The last print line should contain your name.
 (2) In the print trace, you will see the process with higher priorities should be exectued first. Highly priority number means higher process priority.
 
-upload your jar file into your home folder and create a symboliclink link file named as "netid".jar as well under /home/gliu5/homework/hw3
+Rename your jar to "netid".jar and upload it under /home/gliu5/homework/hw3
